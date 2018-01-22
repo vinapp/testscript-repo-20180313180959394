@@ -12,8 +12,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 import org.apache.commons.io.FileUtils;
@@ -32,9 +34,12 @@ import io.appium.java_client.android.AndroidKeyCode;
 
 public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 
+    public WebDriverWait wait;
+    
     @BeforeClass
     public void setUp() throws Exception {
         setUpTest();
+        wait = new WebDriverWait(driver, 30);
     }
     @AfterClass
     public void tearDown()
@@ -69,7 +74,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         contextField.sendKeys(serverutil.getMobContext());
 
         //takeScreenshot("Login details entered");
-        ((AndroidDriver)driver).sendKeyEvent(AndroidKeyCode.ENTER);
+        ((AndroidDriver)wd).sendKeyEvent(AndroidKeyCode.ENTER);
 
         try {
             Thread.sleep(5000);
