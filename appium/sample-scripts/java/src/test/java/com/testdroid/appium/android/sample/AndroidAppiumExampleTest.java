@@ -35,11 +35,13 @@ import io.appium.java_client.android.AndroidKeyCode;
 public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 
     public WebDriverWait wait;
+    public ServerUtil serverutil;
     
     @BeforeClass
     public void setUp() throws Exception {
         setUpTest();
-        wait = new WebDriverWait(driver, 30);
+        serverutil = ServerUtil.getInstance();
+        wait = new WebDriverWait(wd, 30);
     }
     @AfterClass
     public void tearDown()
