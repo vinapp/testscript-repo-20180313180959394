@@ -48,23 +48,23 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         
         //*********Enter the login details and login*********//
-        WebElement userField = driver.findElement(By.id("appcenter_Login_login"));
+        WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
         userField.click();
         userField.sendKeys(serverutil.getUsername());
 
-        WebElement passwordField = driver.findElement(By.id("appcenter_Login_pw"));
+        WebElement passwordField = wd.findElement(By.id("appcenter_Login_pw"));
         passwordField.click();
         passwordField.sendKeys(serverutil.getPassword());
 
-        WebElement hostField = driver.findElement(By.id("appcenter_Login_server"));
+        WebElement hostField = wd.findElement(By.id("appcenter_Login_server"));
         hostField.click();
         hostField.sendKeys(serverutil.getHost());
 
-        WebElement portField = driver.findElement(By.id("appcenter_Login_port"));
+        WebElement portField = wd.findElement(By.id("appcenter_Login_port"));
         portField.click();
         portField.sendKeys(""+ serverutil.getPort() + "");
 
-        WebElement contextField = driver.findElement(By.id("appcenter_Login_ctx"));
+        WebElement contextField = wd.findElement(By.id("appcenter_Login_ctx"));
         contextField.click();
         contextField.sendKeys(serverutil.getMobContext());
 
