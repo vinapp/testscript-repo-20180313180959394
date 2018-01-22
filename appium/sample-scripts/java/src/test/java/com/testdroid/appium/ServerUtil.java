@@ -1,4 +1,4 @@
-package com.ibm.appcenter.tests.utils;
+package com.testdroid.appium;
 
 import java.io.IOException;
 import java.io.InputStream;
