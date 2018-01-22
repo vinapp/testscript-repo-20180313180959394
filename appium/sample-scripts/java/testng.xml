@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test" preserve-order="true">
     <classes>
-         <class name="com.ibm.appcenter.tests.AppCenterClientLogin"/>
+         <class name="com.testdroid.appium.android.sample.AndroidAppiumExampleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
