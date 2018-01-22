@@ -10,6 +10,12 @@ import com.testdroid.appium.BaseAndroidTest;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import com.testdroid.appium.FileUploader;
+import com.testdroid.appium.ServerUtil;
+
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
+
 public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 
     @BeforeClass
