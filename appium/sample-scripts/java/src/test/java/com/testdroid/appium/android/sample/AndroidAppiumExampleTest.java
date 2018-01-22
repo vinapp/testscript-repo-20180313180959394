@@ -76,7 +76,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         contextField.sendKeys(serverutil.getMobContext());
 
         //takeScreenshot("Login details entered");
-        ((AndroidDriver)wd).sendKeyEvent(AndroidKeyCode.ENTER);
+        wd.sendKeyEvent(AndroidKeyCode.ENTER);
 
         try {
             Thread.sleep(5000);
