@@ -52,7 +52,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 
     @Test
     public void mainPageTest() throws IOException, InterruptedException {
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         
         //*********Enter the login details and login*********//
         WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
