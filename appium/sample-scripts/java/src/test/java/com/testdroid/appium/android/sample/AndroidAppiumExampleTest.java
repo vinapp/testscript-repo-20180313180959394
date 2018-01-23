@@ -87,7 +87,7 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
 
         try {
             
-            .sleep(10000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
