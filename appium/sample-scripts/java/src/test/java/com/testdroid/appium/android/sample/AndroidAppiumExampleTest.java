@@ -54,6 +54,13 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
     public void mainPageTest() throws IOException, InterruptedException {
         wd.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         
+        try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+            }
+        
         //*********Enter the login details and login*********//
         WebElement userField = wd.findElement(By.id("appcenter_Login_login"));
         userField.click();
@@ -79,7 +86,8 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         ((AndroidDriver)wd).pressKeyCode(AndroidKeyCode.ENTER);
 
         try {
-            Thread.sleep(10000);
+            
+            .sleep(10000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
