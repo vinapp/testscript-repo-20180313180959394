@@ -94,7 +94,6 @@ public class AndroidAppiumExampleTest  extends BaseAndroidTest {
         }
 
 	/* Check this later
-        //*********Catalog: Displaying the apps*********//
         WebElement catalogElement = wait.until(
                 ExpectedConditions.presenceOfElementLocated(By.xpath("//android.view.View[@content-desc='Catalog']")));
 
