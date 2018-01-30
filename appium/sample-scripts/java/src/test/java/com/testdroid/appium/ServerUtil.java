@@ -27,7 +27,7 @@ public class ServerUtil {
 	public ServerUtil() {
 		properties = new Properties();
 		if (System.getenv("skipDatafile")!=null && System.getenv("skipDatafile").equals("true")) {
-                        System.out.println("........ Vinod Inside if .........");
+                        System.out.println("........ Inside if .........");
 			protocol = System.getenv("protocol"); //Passed as a part of the command line as -Doption
 			host = System.getenv("hostname");
 			port = Integer.valueOf(System.getenv("port"));
@@ -40,10 +40,8 @@ public class ServerUtil {
 			chromedriverpath = System.getenv("chromedriverpath");
 			firefoxdriverpath = System.getenv("firefoxdriverpath");
 			appcenterclientapppath = System.getenv("appcenterclientapppath");
-                        System.out.println("appcenterclientapppath ----- vinod ----> "+ appcenterclientapppath);
-                        System.out.println("host ----- vinod ----> "+ host);
 		} else {
-                        System.out.println("........ Vinod Inside else .........");
+                        System.out.println("........ Inside else .........");
 			InputStream is = ClassLoader.getSystemResourceAsStream("datafile.properties");
 			try {
 				properties.load(is);
