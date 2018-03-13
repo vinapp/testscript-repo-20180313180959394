@@ -35,12 +35,10 @@ import io.appium.java_client.android.AndroidKeyCode;
 public class PushAnalyticsTest  extends BaseAndroidTest {
 
     public WebDriverWait wait;
-    public ServerUtil serverutil;
     
     @BeforeClass
     public void setUp() throws Exception {
         setUpTest();
-        serverutil = ServerUtil.getInstance();
         wait = new WebDriverWait(wd, 30);
     }
     @AfterClass
